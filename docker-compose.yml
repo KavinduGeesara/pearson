@@ -7,14 +7,14 @@ services:
       dockerfile: Dockerfile
     ports: 
       - 3000:3000
-    volumes: 
-      - .:/app
-      - '/app/node_modules'
+    #volumes: 
+     # - .:/app
+     # - '/app/node_modules'
     depends_on: 
       - mysql_server
   
   mysql_server:
-    image: mysql:8.0
+    image: mysql:5.7
     environment: 
       - MYSQL_DATABASE=StudentDB
       - MYSQL_USER=dan
